@@ -1,0 +1,13 @@
+To create package:
+1) Open developer command prompt window for VS2019preview
+2) In the developer command prompt window make \WPFNetCoreCustomControl\Pack the current directory
+3) PACKAGEVERSION can be modified in packWpfNetCore.bat
+4) At command prompt run packAll.bat
+5) Nupkg files should be output to \WPFNetCoreCustomControl\Pack\
+
+Note: The WPFNetCoreCustomControl project SDK file contains package information.
+
+Useful links:
+https://docs.microsoft.com/en-us/dotnet/core/tools/dotnet-pack
+https://docs.microsoft.com/en-us/nuget/create-packages/creating-a-package
+https://docs.microsoft.com/en-us/nuget/install-nuget-client-tools
