@@ -8,8 +8,5 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-
-        <WpfControlNetCore:MyButton x:Name="myButton" Content="hello world test 123" HorizontalAlignment="Left" Height="101" Margin="197,157,0,0" VerticalAlignment="Top" Width="383" Background="White" Click="myButton_Click" DependencyPropertyTrigger="ShowNetCoreUI"/>
-
     </Grid>
 </Window>

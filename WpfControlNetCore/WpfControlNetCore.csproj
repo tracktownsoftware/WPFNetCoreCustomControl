@@ -21,8 +21,35 @@
     <OutputPath>..\NetCore\bin\Debug\</OutputPath>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Content Include=".\Tools\VisualStudioToolsManifest.xml">
+      <Pack>true</Pack>
+      <PackagePath>\tools</PackagePath>
+    </Content>
+  </ItemGroup>
+  
   <ItemGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
     <Content Include="..\NetCore\bin\Release\netcoreapp3.1\Design\WpfControlNetCore.DesignTools.dll">
+      <Pack>true</Pack>
+      <PackagePath>\lib\netcoreapp3.1\Design</PackagePath>
+    </Content>
+    <Content Include="..\NetCore\bin\Release\netcoreapp3.1\WpfControlNetCore.ConsoleApp.exe">
+      <Pack>true</Pack>
+      <PackagePath>\lib\netcoreapp3.1\Design</PackagePath>
+    </Content>
+    <Content Include="..\NetCore\bin\Release\netcoreapp3.1\WpfControlNetCore.ConsoleApp.dll">
+      <Pack>true</Pack>
+      <PackagePath>\lib\netcoreapp3.1\Design</PackagePath>
+    </Content>
+    <Content Include="..\NetCore\bin\Release\netcoreapp3.1\WPFControlNetCore.ConsoleApp.runtimeconfig.json">
+      <Pack>true</Pack>
+      <PackagePath>\lib\netcoreapp3.1\Design</PackagePath>
+    </Content>
+    <Content Include="..\NetCore\bin\Release\netcoreapp3.1\WPFControlNetCore.ConsoleApp.deps.json">
+      <Pack>true</Pack>
+      <PackagePath>\lib\netcoreapp3.1\Design</PackagePath>
+    </Content>
+    <Content Include="..\NetCore\bin\Release\netcoreapp3.1\WPFControlNetCore.dll">
       <Pack>true</Pack>
       <PackagePath>\lib\netcoreapp3.1\Design</PackagePath>
     </Content>
@@ -33,75 +60,25 @@
       <Pack>true</Pack>
       <PackagePath>\lib\netcoreapp3.1\Design</PackagePath>
     </Content>
-  </ItemGroup>
-
-  <ItemGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
-    <Content Include="..\NetCore\bin\Release\netcoreapp3.1\WpfControlNetCore.ConsoleApp.exe">
-      <Pack>true</Pack>
-      <PackagePath>\lib\netcoreapp3.1\Design</PackagePath>
-    </Content>
-  </ItemGroup>
-  <ItemGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
-    <Content Include="..\NetCore\bin\Release\netcoreapp3.1\WpfControlNetCore.ConsoleApp.dll">
-      <Pack>true</Pack>
-      <PackagePath>\lib\netcoreapp3.1\Design</PackagePath>
-    </Content>
-  </ItemGroup>
-  <ItemGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
-    <Content Include="..\NetCore\bin\Release\netcoreapp3.1\WPFControlNetCore.ConsoleApp.runtimeconfig.json">
-      <Pack>true</Pack>
-      <PackagePath>\lib\netcoreapp3.1\Design</PackagePath>
-    </Content>
-  </ItemGroup>
-  <ItemGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
-    <Content Include="..\NetCore\bin\Release\netcoreapp3.1\WPFControlNetCore.ConsoleApp.deps.json">
-      <Pack>true</Pack>
-      <PackagePath>\lib\netcoreapp3.1\Design</PackagePath>
-    </Content>
-  </ItemGroup>
-  <ItemGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
-    <Content Include="..\NetCore\bin\Release\netcoreapp3.1\WPFControlNetCore.dll">
-      <Pack>true</Pack>
-      <PackagePath>\lib\netcoreapp3.1\Design</PackagePath>
-    </Content>
-  </ItemGroup>
-
-  <ItemGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
     <Content Include="..\NetCore\bin\Debug\netcoreapp3.1\WpfControlNetCore.ConsoleApp.exe">
       <Pack>true</Pack>
       <PackagePath>\lib\netcoreapp3.1\Design</PackagePath>
     </Content>
-  </ItemGroup>
-  <ItemGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
     <Content Include="..\NetCore\bin\Debug\netcoreapp3.1\WpfControlNetCore.ConsoleApp.dll">
       <Pack>true</Pack>
       <PackagePath>\lib\netcoreapp3.1\Design</PackagePath>
     </Content>
-  </ItemGroup>
-  <ItemGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
     <Content Include="..\NetCore\bin\Debug\netcoreapp3.1\WPFControlNetCore.ConsoleApp.runtimeconfig.json">
       <Pack>true</Pack>
       <PackagePath>\lib\netcoreapp3.1\Design</PackagePath>
     </Content>
-  </ItemGroup>
-  <ItemGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
     <Content Include="..\NetCore\bin\Debug\netcoreapp3.1\WPFControlNetCore.ConsoleApp.deps.json">
       <Pack>true</Pack>
       <PackagePath>\lib\netcoreapp3.1\Design</PackagePath>
     </Content>
-  </ItemGroup>
-  <ItemGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
     <Content Include="..\NetCore\bin\Debug\netcoreapp3.1\WPFControlNetCore.dll">
       <Pack>true</Pack>
       <PackagePath>\lib\netcoreapp3.1\Design</PackagePath>
-    </Content>
+    </Content>   
   </ItemGroup>
-  
-  <ItemGroup>
-    <Content Include=".\Tools\VisualStudioToolsManifest.xml">
-      <Pack>true</Pack>
-      <PackagePath>\tools</PackagePath>
-    </Content>
-  </ItemGroup>
-
 </Project>

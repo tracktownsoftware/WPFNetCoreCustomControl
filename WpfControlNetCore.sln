@@ -22,7 +22,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Libs", "Libs", "{ECB5E584-A
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Pack", "Pack", "{4A4AF241-B17A-4991-956B-8CB962D4830C}"
 	ProjectSection(SolutionItems) = preProject
-		Pack\packWpfNetCore.bat = Pack\packWpfNetCore.bat
+		Pack\pack.bat = Pack\pack.bat
 	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WPFControlNetCore.ConsoleApp", "WPFControlNetCore.ConsoleApp\WPFControlNetCore.ConsoleApp.csproj", "{51CC6FA1-802E-477D-A6CA-C1A3FF0D54D9}"
