@@ -5,7 +5,8 @@ To create package:
 4) At command prompt run pack.bat
 5) Nupkg files should be output to \WPFNetCoreCustomControl\Pack\Packages
 
-Note: The WPFNetCoreCustomControl project SDK file contains package information
+Note: The WPFControlNetCore.csproj SDK file contains package information to include 
+WPFControlNetCore.designtools.dll and other files.
 
 Useful links:
 https://docs.microsoft.com/en-us/dotnet/core/tools/dotnet-pack
