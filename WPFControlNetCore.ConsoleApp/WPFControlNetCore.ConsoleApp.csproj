@@ -18,4 +18,8 @@
     <ProjectReference Include="..\WpfControlNetCore\WpfControlNetCore.csproj" />
   </ItemGroup>
 
+  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+    <Exec Command="xcopy &quot;$(TargetDir)WpfControlNetCore.ConsoleApp.*&quot; &quot;$(TargetDir)Design\&quot; /Y" />
+  </Target>
+
 </Project>

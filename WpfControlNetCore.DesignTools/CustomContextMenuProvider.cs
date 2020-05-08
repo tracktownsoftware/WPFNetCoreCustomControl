@@ -17,8 +17,11 @@ namespace WpfControlNetCore.DesignTools
         private MenuAction redBackgroundMenuAction;
         private MenuAction whiteBackgroundMenuAction;
         private MenuAction blueBackgroundMenuAction;
-        private MenuAction dependencyPropertyTriggerMenuAction;
-        private MenuAction messageBoxSUCCESSMenuAction;
+        private MenuAction menuActionShowNetCoreUI_v1;
+        private MenuAction menuActionShowNetCoreUI_v2;
+        private MenuAction menuActionShowNetCoreUI_v3;
+        private MenuAction menuActionShowNetCoreUI_v4;
+        private MenuAction menuActionShowNetCoreUI_v5;
 
         public CustomContextMenuProvider()
         {
@@ -35,19 +38,34 @@ namespace WpfControlNetCore.DesignTools
             blueBackgroundMenuAction.Execute +=
                 new EventHandler<MenuActionEventArgs>(BlueBackground_Execute);
 
-            dependencyPropertyTriggerMenuAction = new MenuAction("FAIL-Show NetCore MyButton UI using trigger DependencyProperty");
-            dependencyPropertyTriggerMenuAction.Execute +=
+            menuActionShowNetCoreUI_v1 = new MenuAction("NetCore UI from new process in designtools.dll");
+            menuActionShowNetCoreUI_v1.Execute +=
                 new EventHandler<MenuActionEventArgs>(ShowNetCoreUI_v1_Execute);
 
-            messageBoxSUCCESSMenuAction = new MenuAction("SUCCESS-Show NetCore MyButton UI using new process in designtools.dll");
-            messageBoxSUCCESSMenuAction.Execute +=
+            menuActionShowNetCoreUI_v2 = new MenuAction("NetCore UI from XAML DependencyProperty");
+            menuActionShowNetCoreUI_v2.Execute +=
                 new EventHandler<MenuActionEventArgs>(ShowNetCoreUI_v2_Execute);
+
+            menuActionShowNetCoreUI_v3 = new MenuAction("NetCore UI from XAML DependencyProperty - New Process");
+            menuActionShowNetCoreUI_v3.Execute +=
+                new EventHandler<MenuActionEventArgs>(ShowNetCoreUI_v3_Execute);
+
+            menuActionShowNetCoreUI_v4 = new MenuAction("NetCore UI from XAML DependencyProperty - New Thread");
+            menuActionShowNetCoreUI_v4.Execute +=
+                new EventHandler<MenuActionEventArgs>(ShowNetCoreUI_v4_Execute);
+
+            menuActionShowNetCoreUI_v5 = new MenuAction("NetCore UI from XAML DependencyProperty - New Application");
+            menuActionShowNetCoreUI_v5.Execute +=
+                new EventHandler<MenuActionEventArgs>(ShowNetCoreUI_v5_Execute);
 
             // Set up the MenuGroup
             MenuGroup myMenuGroup = new MenuGroup("MyMenuGroup", "Custom background");
             myMenuGroup.HasDropDown = false;
-            myMenuGroup.Items.Add(dependencyPropertyTriggerMenuAction);
-            myMenuGroup.Items.Add(messageBoxSUCCESSMenuAction);
+            myMenuGroup.Items.Add(menuActionShowNetCoreUI_v1);
+            myMenuGroup.Items.Add(menuActionShowNetCoreUI_v2);
+            myMenuGroup.Items.Add(menuActionShowNetCoreUI_v3);
+            myMenuGroup.Items.Add(menuActionShowNetCoreUI_v4);
+            myMenuGroup.Items.Add(menuActionShowNetCoreUI_v5);
             myMenuGroup.Items.Add(redBackgroundMenuAction);
             myMenuGroup.Items.Add(whiteBackgroundMenuAction);
             myMenuGroup.Items.Add(blueBackgroundMenuAction);
@@ -55,13 +73,6 @@ namespace WpfControlNetCore.DesignTools
         }
 
         private void ShowNetCoreUI_v1_Execute(object sender, MenuActionEventArgs e)
-        {
-            // FAILS - Show .Net Core UI at design-time by using a dependency property as a trigger.
-            var item = e.Selection.PrimarySelection;
-            item.Properties["DependencyPropertyTrigger"].SetValue("ShowNetCoreUI");
-        }
-
-        private void ShowNetCoreUI_v2_Execute(object sender, MenuActionEventArgs e)
         {
             // SUCCESS - Show .Net Core UI at design-time from a .Net Core console app launched in a 
             // new process from this .Net Framework WpfControlNetCore.DesignTools.dll assembly
@@ -87,6 +98,29 @@ namespace WpfControlNetCore.DesignTools
                     item.Properties["Content"].SetValue(result);
                 }
             }
+        }
+        private void ShowNetCoreUI_v2_Execute(object sender, MenuActionEventArgs e)
+        {
+            // FAILS - Show .Net Core UI at design-time by using a dependency property as a trigger.
+            var item = e.Selection.PrimarySelection;
+            item.Properties["DependencyPropertyTrigger"].SetValue("NetCore UI from XAML DependencyProperty");
+        }
+
+        private void ShowNetCoreUI_v3_Execute(object sender, MenuActionEventArgs e)
+        {
+            var item = e.Selection.PrimarySelection;
+            item.Properties["DependencyPropertyTrigger"].SetValue("NetCore UI from XAML DependencyProperty - New Process");
+        }
+        private void ShowNetCoreUI_v4_Execute(object sender, MenuActionEventArgs e)
+        {
+            var item = e.Selection.PrimarySelection;
+            item.Properties["DependencyPropertyTrigger"].SetValue("NetCore UI from XAML DependencyProperty - New Thread");
+        }
+
+        private void ShowNetCoreUI_v5_Execute(object sender, MenuActionEventArgs e)
+        {
+            var item = e.Selection.PrimarySelection;
+            item.Properties["DependencyPropertyTrigger"].SetValue("NetCore UI from XAML DependencyProperty - New Application");
         }
 
         private void RedBackground_Execute(object sender, MenuActionEventArgs e)

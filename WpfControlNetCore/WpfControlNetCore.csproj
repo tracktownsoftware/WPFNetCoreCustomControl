@@ -81,4 +81,8 @@
       <PackagePath>\lib\netcoreapp3.1\Design</PackagePath>
     </Content>   
   </ItemGroup>
+  
+  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+    <Exec Command="xcopy &quot;$(TargetPath)&quot; &quot;$(TargetDir)Design\&quot; /Y" />
+  </Target>
 </Project>
