@@ -27,6 +27,7 @@ namespace WpfControlNetCore
         private void ButtonSave_Click(object sender, RoutedEventArgs e)
         {
             this.MyButtonText = textBox.Text;
+            this.DialogResult = true;
             Close();
         }
 
@@ -48,6 +49,7 @@ namespace WpfControlNetCore
                 textBox.Text = value;
             }
         }
-   }
+
+    }
 
 }

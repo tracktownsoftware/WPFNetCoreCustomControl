@@ -12,6 +12,5 @@
         <Button x:Name="buttonSave" Content="Save" IsDefault="True" HorizontalAlignment="Left" Height="45" Margin="196,354,0,0" VerticalAlignment="Top" Width="171" FontSize="24"/>
         <Button x:Name="buttonCancel" Content="Cancel" HorizontalAlignment="Left" Height="45" Margin="427,354,0,0" VerticalAlignment="Top" Width="171" FontSize="24"/>
         <Label x:Name="label1" Content="Edit MyButton text:" HorizontalAlignment="Left" Margin="44,170,0,0" VerticalAlignment="Top" Width="422" FontSize="24"/>
-
     </Grid>
 </Window>
